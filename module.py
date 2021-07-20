@@ -38,7 +38,7 @@ def couriers_menu():
     """
     print(couriers_menu_options)
 
-def deletion_item(List):
+def delete_existing_item(List):
     """
     This function takes a list as an input, then allows the user to delete an object from the list. Afterwards
     the function returns the updated list.
@@ -55,7 +55,7 @@ def deletion_item(List):
         print(f"The updated list is: \n {List}")
     return List
 
-def edit_item(List):
+def edit_existing_item(List):
     """
     This function takes a list as an input, then allows the user to edit an item from the list, 
     and returns the updated list.
@@ -72,7 +72,7 @@ def edit_item(List):
         print(f"The updated list is: \n {List}")
     return List
 
-def current_list(List):
+def show_current_list(List):
     """ This function takes a list as an input, then allows the user to view all the entries 
     in the current inputted list."""
     print("Inside your current list: \n ")
@@ -80,7 +80,7 @@ def current_list(List):
         print(item)
     
 
-def create_new(List):
+def create_new_item(List):
     """
     This function takes a list as an input, then
     allows the user to add a new entry into the list, and returns the updated list.
@@ -107,7 +107,7 @@ def orders_menu():
     """
     print(order_menu_options)
 
-def show_orders(List):
+def show_existing_orders(List):
     """This function takes in a list and confirms if it's empty, and returns none. If the list isn't empty, it prints out
     an enumerated listing of the items, then returns the list.
     """
@@ -120,7 +120,7 @@ def show_orders(List):
             print(placement, order)
     return List
 
-def create_order(couriers, new_orders):
+def create_new_order(couriers, new_orders):
     """The purpose of this function is to take two lists, and append a dictionary of an order 
     (name, number, address, courier, status of order) into the second list, then return the second list."""
     try:
@@ -244,7 +244,7 @@ def update_existing_order(orders):
                     orders[int(selected_order)][key] = value_change
             return orders
 
-def delete_order(orders_list):
+def delete_existing_order(orders_list):
     """The purpose of this function allows the user to in put a function, then delete an entire order 
     from the list of orders. It returns the updated list of orders."""
     
