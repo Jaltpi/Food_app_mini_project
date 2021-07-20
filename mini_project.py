@@ -1,7 +1,7 @@
 # mini_project_week_3
 
-from module import delete_order, main_menu, orders_menu, products_menu, couriers_menu, create_new, current_list, edit_item, deletion_item, update_existing_order
-from module import orders_menu, show_orders, create_order, update_order_status, update_existing_order, delete_order
+from module import main_menu, orders_menu, products_menu, couriers_menu, create_new_item, show_current_list, edit_existing_item, delete_existing_item, update_existing_order
+from module import orders_menu, show_existing_orders, create_new_order, update_order_status, update_existing_order, delete_existing_order
 
 LOADING = "Loading Main Menu..."
 INVALID = "Invalid selection, returning back to main menu."
@@ -49,19 +49,19 @@ while application_on:
             
         elif second_choice == "1":
             # Shows current list
-            current_list(products)
+            show_current_list(products)
                 
         elif second_choice == "2":
             # Create a new entry in the list
-            create_new(products)
+            create_new_item(products)
             
         elif second_choice == "3":
             # Edit an object in the list
-            edit_item(products)
+            edit_existing_item(products)
         
         elif second_choice == "4":
             # Delete an object in the list
-            deletion_item(products)
+            delete_existing_item(products)
         
         else:
             print(INVALID)   
@@ -78,19 +78,19 @@ while application_on:
             
         elif third_choice == "1":
             # Show current couriers list
-            current_list(couriers)
+            show_current_list(couriers)
             
         elif third_choice == "2":
             # Create new courier
-            create_new(couriers)
+            create_new_item(couriers)
         
         elif third_choice == "3":
             # Update existing courier   
-            edit_item(couriers)
+            edit_existing_item(couriers)
         
         elif third_choice == "4":
             # Delete an existing courier
-            deletion_item(couriers)
+            delete_existing_item(couriers)
         
         else:
             print(INVALID)
@@ -107,11 +107,11 @@ while application_on:
             
         elif fourth_choice == "1":
             # Show current orders
-            show_orders(orders_list)
+            show_existing_orders(orders_list)
                             
         elif fourth_choice == "2":
             # Create an order
-            create_order(couriers, orders_list)
+            create_new_order(couriers, orders_list)
         
         elif fourth_choice == "3":
             # Update existing order status
@@ -123,7 +123,7 @@ while application_on:
             
         elif fourth_choice == "5":
             # Delete an order
-            delete_order(orders_list)
+            delete_existing_order(orders_list)
 
         else:
             print(INVALID)
