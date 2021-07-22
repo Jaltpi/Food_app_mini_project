@@ -56,7 +56,7 @@ def orders_menu():
     print(order_menu_options)
 
 
-def show_current_list(List):
+def show_current_list(List: list) -> list: 
     """ This function takes a list as an input, then allows the user to view all the entries 
     in the current inputted list, ending with returning back the list. If the list is empty,
     the value returned is 'None'."""
@@ -71,7 +71,7 @@ def show_current_list(List):
         return List
     
 
-def create_new_product(List):
+def create_new_product(List: list) -> list:
     """
     This function takes a list as an input, then
     allows the user to add a new entry into the list(product), and returns the updated list.
@@ -93,7 +93,7 @@ def create_new_product(List):
         print(f"The updated list is now:\n {List}")
         return List
 
-def create_new_courier(List):
+def create_new_courier(List: list) -> list:
     """
     This function takes a list as an input, then
     allows the user to add a new entry into the list (courier), and returns the updated list.
@@ -119,7 +119,7 @@ def create_new_courier(List):
         print(f"The updated list is now:\n {List}")
         return List
 
-def create_new_order(couriers, products, new_orders):
+def create_new_order(couriers: list, products: list, new_orders: list) -> list: 
     """The purpose of this function is to take three lists, and append a dictionary of an order 
     (name, number, address, courier, status of order, items) into the last list, then return the return the last
     list."""
@@ -181,7 +181,7 @@ def create_new_order(couriers, products, new_orders):
                 
                 return new_orders
         
-def update_order_status(orders, orders_status):
+def update_order_status(orders: list, orders_status: list) -> list:
     """The purpose of this function allows the user to update the status of their order. 
     It takes in two lists and returns the updated version of the orders list, if either of the lists are empty,
     the function returns 'None'."""
@@ -230,7 +230,7 @@ def update_order_status(orders, orders_status):
             print(orders[int(order_index_value)])
             return orders    
 
-def update_existing_item(List):
+def update_existing_item(List: list) -> list:
     """The purpose of this function is to allow the user to make updates to existing item in a list, it then returns
     the updated version of the list. If the list is empty, it will return 'None'.
     """
@@ -271,7 +271,7 @@ def update_existing_item(List):
             return List
 
 
-def delete_existing_item(List):
+def delete_existing_item(List: list) -> list:
     """The purpose of this function allows the user to input a list, then delete an entire element 
     from the list. If the list empty, it will return 'None', otherwise it returns the updated list."""
     
